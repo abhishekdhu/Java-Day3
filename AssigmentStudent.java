@@ -64,6 +64,14 @@ public class AssigmentStudent {
                     }
                 }
         );
+        System.out.println("Student age based on date of birth");
+        studentList.forEach(student -> {
+            LocalDate localDate = LocalDate.parse(student.dob);
+            LocalDate currentYear = LocalDate.now();
+            int year = currentYear.getYear();
+            System.out.println("Name:"+student.getName()+"Age:"+(year-localDate.getYear()));
+        });
+
 
     }
 
